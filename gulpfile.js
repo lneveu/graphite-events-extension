@@ -18,16 +18,14 @@ gulp.task('clean', function() {
 
 // Copy static folders to build directory
 gulp.task('copy', function() {
-	gulp.src('src/style/fonts/**')
-		.pipe(gulp.dest('build/style/fonts'));
-	gulp.src('src/icons/**')
-		.pipe(gulp.dest('build/icons'));
-	gulp.src('src/js/ext/**')
-		.pipe(gulp.dest('build/js/ext'));
-	gulp.src('src/style/ext/**')
-		.pipe(gulp.dest('build/style/ext'));
-	return gulp.src('src/manifest.json')
-		.pipe(gulp.dest('build'));
+	return gulp.src([
+		'src/style/fonts/**'
+		, 'src/icons/**'
+		, 'src/js/ext/**'
+		, 'src/style/ext/**'
+		, 'src/manifest.json'
+	], { base : './src' } )
+	.pipe(gulp.dest('build'));
 });
 
 // Copy and compress HTML files
