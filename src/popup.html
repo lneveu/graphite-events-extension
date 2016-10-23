@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="style/ext/bootstrap.min.css">
+		<link rel="stylesheet" href="style/ext/flatpickr.min.css">
+		<link rel="stylesheet" href="style/ext/taggle.min.css">
+		<link rel="stylesheet" href="style/custom.css">
+		<script type="text/javascript" src="js/ext/zepto.min.js"></script>
+		<script type="text/javascript" src="js/ext/taggle.min.js"></script>
+		<script type="text/javascript" src="js/ext/flatpickr.min.js"></script>
+		<script type="text/javascript" src="js/popup.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="header_container">
+				<img id="header_logo" src="icons/icon.png"/>
+				<div id="header_tab_new-event" data-tab="new-event" class="header_tab active" title="New event">New event</div>
+				<div id="header_tab_settings" data-tab="settings" class="header_tab glyphicon glyphicon-wrench" title="Settings"></div>
+			</div>
+		</div>
+		<div class="container">
+			<div id="tab_new-event" class="row">
+				<div class="col-xs-12">
+					<div id="form_new-event" class="form-horizontal">
+						<div class="form-group">
+							<label for="event_when" class="col-sm-2 control-label">Date</label>
+							<div class='col-sm-6 input-group flatpickr' id='event_timepicker' data-allow-input="true" data-wrap="true" data-click-opens="false">
+								<input type='text' class="form-control" id="event_when" name="when" data-input/>
+								<span class="input-group-addon icon_event" data-toggle>
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="event_what" class="col-sm-2 control-label">Description</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="event_what" name="what"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="event_tags" class="col-sm-2 control-label">Tags</label>
+							<div class="col-sm-10">
+								<div class="form-control tags_area" id="event_tags" name="tags"></div>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button id="btn_create_event" class="btn btn-primary" tabindex="3" >Create event</button>
+							</div>
+						</div>
+						<div class="loader" hidden></div>
+						<span class="form-error" hidden></span>
+						<span class="form-success" hidden></span>
+					</div>
+				</div>
+			</div>
+
+			<div id="tab_settings" class="row" hidden>
+				<div class="col-xs-12">
+					<h4>Graphite settings</h4>
+					<div id="form_settings" class="form-horizontal">
+						<div class="form-group">
+							<label for="setting_host" class="col-sm-2 control-label">Host</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="setting_host" name="host"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="setting_username" class="col-sm-2 control-label">Username</label>
+							<div class="col-sm-10">
+								<input type="text" class="form-control" id="setting_username" name="username"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="setting_password" class="col-sm-2 control-label">Password</label>
+							<div class="col-sm-10">
+								<input type="password" class="form-control" id="setting_password" name="password"/>
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-2 col-sm-10">
+								<button class="btn btn-primary" id="setting_edit_btn">Edit</button>
+								<button class="btn btn-primary" id="setting_save_btn">Save</button>
+							</div>
+						</div>
+						<span class="form-error" hidden></span>
+						<span class="form-success" hidden></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
