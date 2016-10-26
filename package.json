@@ -1,6 +1,6 @@
 {
   "name": "graphite-events-extension",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Chrome extension to push events to a Graphite platform",
   "main": "src/js/popup.js",
   "scripts": {

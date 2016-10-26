@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Graphite Events",
 	"description": "Push events to a Graphite platform",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"homepage_url": "https://github.com/LoannNeveu/graphite-events-extension",
 	"author": "Loann Neveu <neveu.loann@gmail.com>",
 	"icons": {

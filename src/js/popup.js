@@ -103,7 +103,7 @@
 				{
 					what   : newEventTAB.$eventDesc.val()
 					, when : newEventTAB.timepicker.selectedDates[0].getTime() / 1000 // unix time
-					, tags : newEventTAB.tags.getTagValues()
+					, tags : newEventTAB.tags.getTagValues().join(',')
 				};
 
 				newEventTAB.$loader.show();
